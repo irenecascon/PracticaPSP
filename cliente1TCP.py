@@ -1,16 +1,17 @@
 import socket
+import requests
 
-
+#Manda el nombre de un pokemon
 def cliente_tcp():
-    # Crear socket
+    #Crea socket
     c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     c.connect(("127.0.0.1", 5001))
     print("[CLIENTE] Conectado al servidor.")
 
-    mensaje = "Cliente1 manda pokemon1"
+    mensaje = input("Introduce el nombre del pokemon:")
     c.send(mensaje.encode())
 
-    # Recibir mensajes del servidor hasta que cierre la conexión
+    #Recibe mensajes del servidor hasta que cierre la conexión
     try:
         while True:
             msg = c.recv(1024)
@@ -25,3 +26,4 @@ def cliente_tcp():
 
 
 cliente_tcp()
+
