@@ -35,7 +35,7 @@ def manejar_cliente(cliente_socket, addr):
     global clientes_conectados, historial_batallas
 
     logging.info(f"[SERVIDOR TCP] Conexión establecida con {addr}")
-
+    print
     #Bloquea el semáforo
     if not semaforo.acquire(blocking=False):
         logging.info(f"[SERVIDOR TCP] Cliente {addr} en espera por semáforo")
@@ -149,6 +149,14 @@ def servidor_tcp_hilos():
 
     host = "127.0.0.1"
     port = 5001
+
+    context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+    try:
+        context.load_cert_chain(certfile="cert.pem", keyfile="key.pem")
+    except FileNotFoundError:
+        logging.error("Error: Certificado o clave no encontrados. Usa openssl para generarlos.")
+        return
+
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((host, port))
     server_socket.listen(5)
@@ -156,10 +164,14 @@ def servidor_tcp_hilos():
     logging.info("[SERVIDOR TCP] Esperando conexiones...")
 
     while True:
-        #Crea un nuevo hilo para cada cliente que se conecta
-        cliente_socket, addr = server_socket.accept()
-        cliente_hilo = threading.Thread(target=manejar_cliente, args=(cliente_socket, addr))
-        cliente_hilo.start()
+        client_socket, addr = server_socket.accept()
+        try:
+            connstream = context.wrap_socket(client_socket, server_side=True)
+            threading.Thread(target=manejar_cliente, args=(connstream, addr)).start()
+        except ssl.SSLError as ssl_err:
+            logging.error("[SERVIDOR] Error SSL:", ssl_err)
+            client_socket.close()
+
 
 def servidor_udp():
     global historial_batallas
