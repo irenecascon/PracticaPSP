@@ -1,29 +1,42 @@
 import socket
-import requests
+import ssl
 
-#Manda el nombre de un pokemon
-def cliente_tcp():
-    #Crea socket
-    c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    c.connect(("127.0.0.1", 5001))
-    print("[CLIENTE] Conectado al servidor.")
+def cliente_tcp_ssl():
+    host = "127.0.0.1"
+    port = 5001
 
-    mensaje = input("Introduce el nombre del pokemon:")
-    c.send(mensaje.encode())
+    # Crear el contexto SSL
+    context = ssl.create_default_context()
+    context.check_hostname = False
+    context.verify_mode = ssl.CERT_NONE  # No verifica el certificado (solo para pruebas locales)
 
-    #Recibe mensajes del servidor hasta que cierre la conexión
+    # Crear socket TCP normal
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    # Envolver con SSL
+    conn = context.wrap_socket(sock, server_hostname=host)
+
     try:
+        conn.connect((host, port))
+        print("[CLIENTE] Conectado al servidor mediante SSL.")
+
+        mensaje = input("Introduce el nombre del Pokémon: ")
+        conn.send(mensaje.encode())
+
+        # Recibir mensajes
         while True:
-            msg = c.recv(1024)
+            msg = conn.recv(1024)
             if not msg:
                 break
             print("[CLIENTE] Recibe:", msg.decode())
+
     except Exception as e:
-        print("[CLIENTE] Error al recibir datos:", e)
+        print("[CLIENTE] Error:", e)
 
-    print("[CLIENTE] Cerrando conexión.")
-    c.close()
+    finally:
+        print("[CLIENTE] Cerrando conexión.")
+        conn.close()
 
+cliente_tcp_ssl()
 
-cliente_tcp()
 

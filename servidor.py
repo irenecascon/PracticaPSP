@@ -1,4 +1,6 @@
 import threading
+import ssl
+
 
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import serialization, hashes
@@ -8,6 +10,7 @@ import os
 import time
 import socket
 import requests
+from flask import Flask, jsonify, request
 
 #Limita el número de personas en la batalla
 semaforo = threading.Semaphore(2)
@@ -20,6 +23,8 @@ lock = threading.Lock()
 #Espera a que haya otro conectado
 condicion = threading.Condition(lock)
 
+
+contador =1
 def manejar_cliente(cliente_socket, addr):
     global clientes_conectados, historial_batallas
 
@@ -51,7 +56,7 @@ def manejar_cliente(cliente_socket, addr):
 
         #Simula espera
         #Empieza la batalla
-        time.sleep(10)
+        time.sleep(5)
         with lock:
             if len(clientes_conectados) == 2:
                 #Obtiene la información
@@ -69,6 +74,7 @@ def manejar_cliente(cliente_socket, addr):
                     ganador = "Empate"
 
                 resultado = {
+                    "id_batalla": contador,
                     "jugador1": poke1,
                     "puntos1": p1_exp,
                     "jugador2": poke2,
@@ -78,6 +84,7 @@ def manejar_cliente(cliente_socket, addr):
                 #Guarda el resultado
                 historial_batallas.append(resultado)
 
+                contador + 1
                 #Manda el resultado
                 msg1 = f"Resultado: {poke1} ({p1_exp}) vs {poke2} ({p2_exp}). Ganador: {ganador}"
                 msg2 = f"Resultado: {poke1} ({p1_exp}) vs {poke2} ({p2_exp}). Ganador: {ganador}"
@@ -109,17 +116,29 @@ def manejar_cliente(cliente_socket, addr):
                 clientes_conectados.remove((cliente_socket, mensaje, addr))
         semaforo.release()
 
+
 def obtener_datos(nombre):
-    #Obtiene los datos a comparar posteriormente
+    # Obtiene los datos a comparar posteriormente
     url = f"https://pokeapi.co/api/v2/pokemon/{nombre.lower()}"
     try:
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            return data["base_experience"]
-    except:
-        pass
+            # Verificar si "base_experience" está presente
+            if "base_experience" in data:
+                base_exp = data["base_experience"]
+                print(f"[DEBUG] Datos obtenidos para {nombre}: base_experience = {base_exp}")
+                return base_exp
+            else:
+                print(f"[DEBUG] 'base_experience' no encontrado en la respuesta para {nombre}")
+        else:
+            print(f"[DEBUG] Error en la API para {nombre}: Código de estado {response.status_code}")
+    except Exception as e:
+        print(f"[DEBUG] Excepción al obtener datos para {nombre}: {e}")
+
+    # Devuelve un valor por defecto en caso de error
     return 0
+
 
 def servidor_tcp_hilos():
 
@@ -177,7 +196,7 @@ def servidor_udp():
             #5. Prepara el historial
             respuesta = "Historial de batallas:\n"
             for i, batalla in enumerate(historial_batallas):
-                respuesta += f"{i + 1}. {batalla['jugador1']} ({batalla['puntos1']}) vs {batalla['jugador2']} ({batalla['puntos2']}) -> Ganador: {batalla['ganador']}\n"
+                respuesta += f"{i + 1}. {batalla['id_batalla']}  {batalla['jugador1']} ({batalla['puntos1']}) vs {batalla['jugador2']} ({batalla['puntos2']}) -> Ganador: {batalla['ganador']}\n"
 
             #6. Cifra y envia
             iv = os.urandom(16)
@@ -189,6 +208,37 @@ def servidor_udp():
         except Exception as e:
             print(f"[SERVIDOR UDP][ERROR]: {e}")
 
+app = Flask(__name__)
+
+@app.route('/batallas', methods=['GET'])
+def get_batallas():
+    return jsonify(historial_batallas)
+
+@app.route('/batallas/<int:id>', methods=['GET'])
+def get_batalla(id):
+    if 0 <= id < len(historial_batallas):
+        return jsonify(historial_batallas[id])
+    return jsonify({"error": "Batalla no encontrada"}), 404
+
+@app.route('/batallas', methods=['POST'])
+def post_batalla():
+    nueva = request.json
+    historial_batallas.append(nueva)
+    return jsonify({"mensaje": "Batalla añadida", "id": len(historial_batallas)-1}), 201
+
+@app.route('/batallas/<int:id>', methods=['PUT'])
+def update_batalla(id):
+    if 0 <= id < len(historial_batallas):
+        historial_batallas[id] = request.json
+        return jsonify({"mensaje": "Batalla actualizada"})
+    return jsonify({"error": "Batalla no encontrada"}), 404
+
+@app.route('/batallas/<int:id>', methods=['DELETE'])
+def delete_batalla(id):
+    if 0 <= id < len(historial_batallas):
+        eliminada = historial_batallas.pop(id)
+        return jsonify({"mensaje": "Batalla eliminada", "batalla": eliminada})
+    return jsonify({"error": "Batalla no encontrada"}), 404
 
 if __name__ == "__main__":
     hilo_tcp = threading.Thread(target=servidor_tcp_hilos)
@@ -196,8 +246,7 @@ if __name__ == "__main__":
 
     hilo_tcp.start()
     hilo_udp.start()
+    app.run(port=5002, debug=True, use_reloader=False)
 
     hilo_tcp.join()
     hilo_udp.join()
-
-
