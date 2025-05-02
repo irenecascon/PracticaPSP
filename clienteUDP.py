@@ -10,7 +10,7 @@ def cliente_udp():
     #1. Crea socket
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     servidor = ("127.0.0.1", 5000)
-    print("[CLIENTE] Enviando mensaje al servidor: Hola")
+    print("[CLIENTE] Conenctando al servidor")
     s.sendto("Hola".encode(), servidor)
 
     #2. Recibe clave pública del servidor

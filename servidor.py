@@ -1,6 +1,6 @@
 import threading
 import ssl
-
+import logging
 
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import serialization, hashes
@@ -11,6 +11,12 @@ import time
 import socket
 import requests
 from flask import Flask, jsonify, request
+
+# Configura el logger
+logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s', handlers=[
+    logging.FileHandler("servidor.log"),
+    logging.StreamHandler()
+])
 
 #Limita el número de personas en la batalla
 semaforo = threading.Semaphore(2)
@@ -28,25 +34,24 @@ contador =1
 def manejar_cliente(cliente_socket, addr):
     global clientes_conectados, historial_batallas
 
-    print(f"[SERVIDOR TCP] Conexión establecida con {addr}")
+    logging.info(f"[SERVIDOR TCP] Conexión establecida con {addr}")
 
     #Bloquea el semáforo
     if not semaforo.acquire(blocking=False):
-        print(f"[SERVIDOR TCP] Cliente {addr} en espera por semáforo")
+        logging.info(f"[SERVIDOR TCP] Cliente {addr} en espera por semáforo")
         cliente_socket.send("Servidor ocupado, esperando turno...".encode())
         semaforo.acquire()
 
     try:
         #Recibe pokemon
         mensaje = cliente_socket.recv(1024).decode()
-        print(f"[SERVIDOR TCP] Mensaje recibido de {addr}: {mensaje}")
+        logging.info(f"[SERVIDOR TCP] Mensaje recibido de {addr}: {mensaje}")
 
         with lock:
             #Guarda la info
             clientes_conectados.append((cliente_socket, mensaje, addr))
             #Si no hay otro, espera
             if len(clientes_conectados) < 2:
-                print("[SERVIDOR TCP] Esperando otro cliente...")
                 cliente_socket.send("Esperando otro jugador...".encode())
                 condicion.wait()
             #Si hay otro, empieza la batalla
@@ -65,7 +70,6 @@ def manejar_cliente(cliente_socket, addr):
                 p2_exp = obtener_datos(poke2)
 
                 #Compara
-                print(f"[SERVIDOR TCP] {poke1} ({p1_exp}) vs {poke2} ({p2_exp})")
                 if p1_exp > p2_exp:
                     ganador = poke1
                 elif p2_exp > p1_exp:
@@ -83,6 +87,7 @@ def manejar_cliente(cliente_socket, addr):
                 }
                 #Guarda el resultado
                 historial_batallas.append(resultado)
+                logging.info(f"[SERVIDOR TCP] {poke1} ({p1_exp}) vs {poke2} ({p2_exp}) - Ganador{ganador}")
 
                 contador + 1
                 #Manda el resultado
@@ -102,11 +107,11 @@ def manejar_cliente(cliente_socket, addr):
                 return
 
     except Exception as e:
-        print(f"[SERVIDOR TCP] Error con {addr}: {e}")
+        logging.error(f"[SERVIDOR TCP] Error con {addr}: {e}")
 
     finally:
         #Se asegura de cerrar la conexión incluso si hubo error
-        print(f"[SERVIDOR TCP] Cerrando conexión con {addr}")
+        logging.info(f"[SERVIDOR TCP] Cerrando conexión con {addr}")
         try:
             cliente_socket.close()
         except:
@@ -127,14 +132,14 @@ def obtener_datos(nombre):
             # Verificar si "base_experience" está presente
             if "base_experience" in data:
                 base_exp = data["base_experience"]
-                print(f"[DEBUG] Datos obtenidos para {nombre}: base_experience = {base_exp}")
+                logging.info(f"[DEBUG] Datos obtenidos para {nombre}: base_experience = {base_exp}")
                 return base_exp
             else:
-                print(f"[DEBUG] 'base_experience' no encontrado en la respuesta para {nombre}")
+                logging.warning(f"[DEBUG] 'base_experience' no encontrado en la respuesta para {nombre}")
         else:
-            print(f"[DEBUG] Error en la API para {nombre}: Código de estado {response.status_code}")
+            logging.warning(f"[DEBUG] Error en la API para {nombre}: Código de estado {response.status_code}")
     except Exception as e:
-        print(f"[DEBUG] Excepción al obtener datos para {nombre}: {e}")
+        logging.error(f"[DEBUG] Excepción al obtener datos para {nombre}: {e}")
 
     # Devuelve un valor por defecto en caso de error
     return 0
@@ -148,7 +153,7 @@ def servidor_tcp_hilos():
     server_socket.bind((host, port))
     server_socket.listen(5)
 
-    print("[SERVIDOR TCP] Esperando conexiones...")
+    logging.info("[SERVIDOR TCP] Esperando conexiones...")
 
     while True:
         #Crea un nuevo hilo para cada cliente que se conecta
@@ -169,13 +174,13 @@ def servidor_udp():
 
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind(("127.0.0.1", 5000))
-    print("[SERVIDOR UDP] Esperando mensajes en el puerto 5000...")
+    logging.info("[SERVIDOR UDP] Esperando mensajes en el puerto 5000...")
 
     while True:
         try:
             #1. Recibe solicitud
             datos, addr = s.recvfrom(1024)
-            print(f"[SERVIDOR UDP] Mensaje recibido de {addr}: {datos.decode()}")
+            logging.info(f"[SERVIDOR UDP] Mensaje recibido de {addr}: {datos.decode()}")
 
             #2. Envia clave pública
             s.sendto(pem_publica, addr)
@@ -203,10 +208,10 @@ def servidor_udp():
             cipher = AES.new(aes_key, AES.MODE_CBC, iv)
             mensaje_cifrado = cipher.encrypt(pad(respuesta.encode(), AES.block_size))
             s.sendto(iv + mensaje_cifrado, addr)
-            print("[SERVIDOR UDP] Mensaje cifrado enviado.")
+            logging.info("[SERVIDOR UDP] Historial enviado.")
 
         except Exception as e:
-            print(f"[SERVIDOR UDP][ERROR]: {e}")
+            logging.error(f"[SERVIDOR UDP][ERROR]: {e}")
 
 app = Flask(__name__)
 
