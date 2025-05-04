@@ -23,19 +23,22 @@ semaforo = threading.Semaphore(2)
 #Almacena los datos para hacer la batalla
 clientes_conectados = []
 #Guarda la información de las batallas
-historial_batallas = []
+historial_batallas = {}
 #Evita que dos clientes se conecten a la vez cansando interferencias
 lock = threading.Lock()
 #Espera a que haya otro conectado
 condicion = threading.Condition(lock)
 
+contador = 1
 
-contador =1
+contador_lock = threading.Lock()
+
 def manejar_cliente(cliente_socket, addr):
-    global clientes_conectados, historial_batallas
+    global clientes_conectados, historial_batallas, contador
 
     logging.info(f"[SERVIDOR TCP] Conexión establecida con {addr}")
-    print
+    enviar_lista_pokemons(cliente_socket)
+
     #Bloquea el semáforo
     if not semaforo.acquire(blocking=False):
         logging.info(f"[SERVIDOR TCP] Cliente {addr} en espera por semáforo")
@@ -43,6 +46,7 @@ def manejar_cliente(cliente_socket, addr):
         semaforo.acquire()
 
     try:
+
         #Recibe pokemon
         mensaje = cliente_socket.recv(1024).decode()
         logging.info(f"[SERVIDOR TCP] Mensaje recibido de {addr}: {mensaje}")
@@ -57,11 +61,13 @@ def manejar_cliente(cliente_socket, addr):
             #Si hay otro, empieza la batalla
             else:
                 condicion.notify_all()
-                cliente_socket.send("Otro jugador encontrado".encode())
+                cliente_socket.send("Otro jugador encontrado!".encode())
 
         #Simula espera
+        cliente_socket.send("Comienza la batalla".encode())
+
         #Empieza la batalla
-        time.sleep(5)
+        time.sleep(15)
         with lock:
             if len(clientes_conectados) == 2:
                 #Obtiene la información
@@ -86,10 +92,11 @@ def manejar_cliente(cliente_socket, addr):
                     "ganador": ganador
                 }
                 #Guarda el resultado
-                historial_batallas.append(resultado)
-                logging.info(f"[SERVIDOR TCP] {poke1} ({p1_exp}) vs {poke2} ({p2_exp}) - Ganador{ganador}")
+                historial_batallas[resultado["id_batalla"]] = resultado
+                logging.info(f"[SERVIDOR TCP] {poke1} ({p1_exp}) vs {poke2} ({p2_exp}) - Ganador: {ganador}")
 
-                contador + 1
+                with contador_lock:
+                    contador += 1  # Incremento seguro
                 #Manda el resultado
                 msg1 = f"Resultado: {poke1} ({p1_exp}) vs {poke2} ({p2_exp}). Ganador: {ganador}"
                 msg2 = f"Resultado: {poke1} ({p1_exp}) vs {poke2} ({p2_exp}). Ganador: {ganador}"
@@ -121,6 +128,25 @@ def manejar_cliente(cliente_socket, addr):
                 clientes_conectados.remove((cliente_socket, mensaje, addr))
         semaforo.release()
 
+def obtener_nombres_pokemons(limit=20):
+    url = f"https://pokeapi.co/api/v2/pokemon?limit={limit}"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        nombres = [pokemon["name"].capitalize() for pokemon in data["results"]]
+        return nombres
+    except requests.RequestException as e:
+        logging.error(f"Error al obtener Pokémon de la API: {e}")
+        return ["Pikachu", "Charmander", "Bulbasaur"]  # fallback
+
+def enviar_lista_pokemons(cliente_socket, cantidad=20):
+    pokemons_disponibles = obtener_nombres_pokemons(cantidad)
+    lista = "Pokémons disponibles:\n" + "\n".join(f"- {p}" for p in pokemons_disponibles)
+    try:
+        cliente_socket.send(lista.encode())
+    except Exception as e:
+        logging.error(f"Error al enviar lista de pokémons: {e}")
 
 def obtener_datos(nombre):
     # Obtiene los datos a comparar posteriormente
@@ -137,11 +163,10 @@ def obtener_datos(nombre):
             else:
                 logging.warning(f"[DEBUG] 'base_experience' no encontrado en la respuesta para {nombre}")
         else:
-            logging.warning(f"[DEBUG] Error en la API para {nombre}: Código de estado {response.status_code}")
+            logging.warning(f"[DEBUG] Error en la API para {nombre}: Código de estado {response.status_code}, nombre no encontrado")
     except Exception as e:
         logging.error(f"[DEBUG] Excepción al obtener datos para {nombre}: {e}")
 
-    # Devuelve un valor por defecto en caso de error
     return 0
 
 
@@ -212,8 +237,8 @@ def servidor_udp():
 
             #5. Prepara el historial
             respuesta = "Historial de batallas:\n"
-            for i, batalla in enumerate(historial_batallas):
-                respuesta += f"{i + 1}. {batalla['id_batalla']}  {batalla['jugador1']} ({batalla['puntos1']}) vs {batalla['jugador2']} ({batalla['puntos2']}) -> Ganador: {batalla['ganador']}\n"
+            for id_batalla, batalla in historial_batallas.items():
+                respuesta += f"ID {id_batalla}: {batalla['jugador1']} ({batalla['puntos1']}) vs {batalla['jugador2']} ({batalla['puntos2']}) -> Ganador: {batalla['ganador']}\n"
 
             #6. Cifra y envia
             iv = os.urandom(16)
@@ -226,36 +251,42 @@ def servidor_udp():
             logging.error(f"[SERVIDOR UDP][ERROR]: {e}")
 
 app = Flask(__name__)
-
 @app.route('/batallas', methods=['GET'])
 def get_batallas():
-    return jsonify(historial_batallas)
+    return jsonify(list(historial_batallas.values()))  # devuelve una lista de batallas
 
 @app.route('/batallas/<int:id>', methods=['GET'])
 def get_batalla(id):
-    if 0 <= id < len(historial_batallas):
-        return jsonify(historial_batallas[id])
+    batalla = historial_batallas.get(id)
+    if batalla:
+        return jsonify(batalla)
     return jsonify({"error": "Batalla no encontrada"}), 404
 
 @app.route('/batallas', methods=['POST'])
 def post_batalla():
     nueva = request.json
-    historial_batallas.append(nueva)
-    return jsonify({"mensaje": "Batalla añadida", "id": len(historial_batallas)-1}), 201
+    id_batalla = nueva.get("id_batalla")
+    if id_batalla is None:
+        return jsonify({"error": "id_batalla requerido"}), 400
+    if id_batalla in historial_batallas:
+        return jsonify({"error": "Ya existe una batalla con ese id"}), 400
+    historial_batallas[id_batalla] = nueva
+    return jsonify({"mensaje": "Batalla añadida"}), 201
 
 @app.route('/batallas/<int:id>', methods=['PUT'])
 def update_batalla(id):
-    if 0 <= id < len(historial_batallas):
+    if id in historial_batallas:
         historial_batallas[id] = request.json
         return jsonify({"mensaje": "Batalla actualizada"})
     return jsonify({"error": "Batalla no encontrada"}), 404
 
 @app.route('/batallas/<int:id>', methods=['DELETE'])
 def delete_batalla(id):
-    if 0 <= id < len(historial_batallas):
+    if id in historial_batallas:
         eliminada = historial_batallas.pop(id)
         return jsonify({"mensaje": "Batalla eliminada", "batalla": eliminada})
     return jsonify({"error": "Batalla no encontrada"}), 404
+
 
 if __name__ == "__main__":
     hilo_tcp = threading.Thread(target=servidor_tcp_hilos)

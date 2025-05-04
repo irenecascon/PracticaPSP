@@ -45,6 +45,5 @@ def cliente_udp():
 
     s.close()
 
-if __name__ == "__main__":
-    cliente_udp()
+cliente_udp()
 

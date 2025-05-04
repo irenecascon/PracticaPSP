@@ -19,7 +19,8 @@ def cliente_tcp_ssl():
     try:
         conn.connect((host, port))
         print("[CLIENTE] Conectado al servidor mediante SSL.")
-
+        lista = conn.recv(2048).decode()
+        print("[CLIENTE] Lista de Pokémons disponibles:\n" + lista)
         mensaje = input("Introduce el nombre del Pokémon: ")
         conn.send(mensaje.encode())
 
