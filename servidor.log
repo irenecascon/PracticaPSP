@@ -1,0 +1,440 @@
+2025-05-02 19:06:58,949 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-02 19:06:58,950 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-02 19:06:58,998 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:06:58,998 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:07:07,556 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62070)
+2025-05-02 19:07:15,278 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62070): pikachu
+2025-05-02 19:07:20,372 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62072)
+2025-05-02 19:07:23,915 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62072): rattata
+2025-05-02 19:07:30,562 [INFO] [DEBUG] Datos obtenidos para pikachu: base_experience = 112
+2025-05-02 19:07:30,661 [INFO] [DEBUG] Datos obtenidos para rattata: base_experience = 51
+2025-05-02 19:07:30,663 [INFO] [SERVIDOR TCP] pikachu (112) vs rattata (51) - Ganadorpikachu
+2025-05-02 19:07:30,663 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62072)
+2025-05-02 19:07:30,663 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62070)
+2025-05-02 19:07:35,489 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 54467): Hola
+2025-05-02 19:07:35,504 [INFO] [SERVIDOR UDP] Mensaje cifrado enviado.
+2025-05-02 19:31:17,759 [ERROR] Error: Certificado o clave no encontrados. Usa openssl para generarlos.
+2025-05-02 19:31:17,760 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-02 19:31:17,798 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:31:17,798 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:33:01,931 [ERROR] Error: Certificado o clave no encontrados. Usa openssl para generarlos.
+2025-05-02 19:33:01,932 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-02 19:33:01,979 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:33:01,979 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:34:38,072 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-02 19:34:38,108 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:34:38,108 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:34:43,996 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:34:43,997 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:35:07,583 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:35:07,583 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:35:58,170 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-02 19:35:58,172 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-02 19:35:58,210 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:35:58,210 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:36:02,443 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62314)
+2025-05-02 19:36:07,646 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62314): pikachu
+2025-05-02 19:36:11,895 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62315)
+2025-05-02 19:36:14,370 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62315): rattata
+2025-05-02 19:36:19,577 [INFO] [DEBUG] Datos obtenidos para pikachu: base_experience = 112
+2025-05-02 19:36:19,661 [INFO] [DEBUG] Datos obtenidos para rattata: base_experience = 51
+2025-05-02 19:36:19,661 [INFO] [SERVIDOR TCP] pikachu (112) vs rattata (51) - Ganadorpikachu
+2025-05-02 19:36:19,662 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62315)
+2025-05-02 19:36:19,662 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62314)
+2025-05-02 19:36:34,018 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 52956): Hola
+2025-05-02 19:36:34,034 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-02 19:36:41,428 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62318)
+2025-05-02 19:36:45,405 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62318): pidgey
+2025-05-02 19:36:48,571 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62319)
+2025-05-02 19:36:53,408 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62319): ivysaur
+2025-05-02 19:36:58,502 [INFO] [DEBUG] Datos obtenidos para pidgey: base_experience = 50
+2025-05-02 19:36:58,592 [INFO] [DEBUG] Datos obtenidos para ivysaur: base_experience = 142
+2025-05-02 19:36:58,593 [INFO] [SERVIDOR TCP] pidgey (50) vs ivysaur (142) - Ganadorivysaur
+2025-05-02 19:36:58,595 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62318)
+2025-05-02 19:36:58,595 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62319)
+2025-05-02 19:37:29,135 [INFO] 127.0.0.1 - - [02/May/2025 19:37:29] "GET /batallas HTTP/1.1" 200 -
+2025-05-02 19:37:42,913 [INFO] 127.0.0.1 - - [02/May/2025 19:37:42] "GET /batallas/1 HTTP/1.1" 200 -
+2025-05-02 19:38:04,937 [INFO] 127.0.0.1 - - [02/May/2025 19:38:04] "[35m[1mPOST /batallas HTTP/1.1[0m" 201 -
+2025-05-02 19:38:10,467 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 62139): Hola
+2025-05-02 19:38:10,483 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-02 19:39:15,244 [INFO] 127.0.0.1 - - [02/May/2025 19:39:15] "DELETE /batallas/2 HTTP/1.1" 200 -
+2025-05-02 19:39:20,542 [INFO] 127.0.0.1 - - [02/May/2025 19:39:20] "GET /batallas HTTP/1.1" 200 -
+2025-05-02 19:40:15,469 [INFO] 127.0.0.1 - - [02/May/2025 19:40:15] "[31m[1mPUT /batallas HTTP/1.1[0m" 405 -
+2025-05-02 19:40:45,904 [INFO] 127.0.0.1 - - [02/May/2025 19:40:45] "PUT /batallas/1 HTTP/1.1" 200 -
+2025-05-02 19:40:50,274 [INFO] 127.0.0.1 - - [02/May/2025 19:40:50] "GET /batallas/1 HTTP/1.1" 200 -
+2025-05-02 19:40:57,956 [INFO] 127.0.0.1 - - [02/May/2025 19:40:57] "GET /batallas HTTP/1.1" 200 -
+2025-05-02 19:41:02,248 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 58579): Hola
+2025-05-02 19:41:02,267 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-02 19:41:13,856 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62383)
+2025-05-02 19:41:16,534 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62383): 
+2025-05-02 19:41:16,534 [ERROR] [SERVIDOR TCP] Error con ('127.0.0.1', 62383): EOF occurred in violation of protocol (_ssl.c:2406)
+2025-05-02 19:41:16,534 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62383)
+2025-05-02 19:41:18,317 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62384)
+2025-05-02 19:41:26,677 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62384): pidgey
+2025-05-02 19:41:29,924 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62385)
+2025-05-02 19:41:35,418 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62385): ivysaur
+2025-05-02 19:41:40,907 [INFO] [DEBUG] Datos obtenidos para pidgey: base_experience = 50
+2025-05-02 19:41:41,011 [INFO] [DEBUG] Datos obtenidos para ivysaur: base_experience = 142
+2025-05-02 19:41:41,012 [INFO] [SERVIDOR TCP] pidgey (50) vs ivysaur (142) - Ganadorivysaur
+2025-05-02 19:41:41,015 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62385)
+2025-05-02 19:41:41,015 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62384)
+2025-05-02 19:41:44,034 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 64226): Hola
+2025-05-02 19:41:44,053 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-02 19:41:47,057 [INFO] 127.0.0.1 - - [02/May/2025 19:41:47] "GET /batallas HTTP/1.1" 200 -
+2025-05-02 19:46:03,823 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-02 19:46:03,825 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-02 19:46:03,871 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-02 19:46:03,871 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-02 19:46:07,957 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62406)
+2025-05-02 19:46:11,742 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62406): pikachu
+2025-05-02 19:46:14,900 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62407)
+2025-05-02 19:46:17,435 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62407): rattata
+2025-05-02 19:46:22,615 [INFO] [DEBUG] Datos obtenidos para pikachu: base_experience = 112
+2025-05-02 19:46:23,500 [INFO] [DEBUG] Datos obtenidos para rattata: base_experience = 51
+2025-05-02 19:46:23,503 [INFO] [SERVIDOR TCP] pikachu (112) vs rattata (51) - Ganadorpikachu
+2025-05-02 19:46:23,504 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62407)
+2025-05-02 19:46:23,504 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62406)
+2025-05-02 19:46:25,752 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 62989): Hola
+2025-05-02 19:46:25,773 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-02 19:46:30,912 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62410)
+2025-05-02 19:46:35,792 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62410): ivysaur
+2025-05-02 19:46:38,651 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 62411)
+2025-05-02 19:46:42,993 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 62411): pidgey
+2025-05-02 19:46:48,125 [INFO] [DEBUG] Datos obtenidos para ivysaur: base_experience = 142
+2025-05-02 19:46:48,196 [INFO] [DEBUG] Datos obtenidos para pidgey: base_experience = 50
+2025-05-02 19:46:48,197 [INFO] [SERVIDOR TCP] ivysaur (142) vs pidgey (50) - Ganadorivysaur
+2025-05-02 19:46:48,198 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62411)
+2025-05-02 19:46:48,198 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 62410)
+2025-05-02 19:46:50,764 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 50449): Hola
+2025-05-02 19:46:50,780 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-03 10:13:41,760 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:13:41,765 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:13:41,827 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:13:41,827 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:13:46,607 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 63692)
+2025-05-03 10:13:52,159 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 63692): pikachu
+2025-05-03 10:14:40,547 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:14:40,549 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:14:40,579 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:14:40,580 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:14:44,340 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 63707)
+2025-05-03 10:14:52,707 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 63707): 
+2025-05-03 10:14:52,707 [ERROR] [SERVIDOR TCP] Error con ('127.0.0.1', 63707): EOF occurred in violation of protocol (_ssl.c:2406)
+2025-05-03 10:14:52,707 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 63707)
+2025-05-03 10:15:32,387 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:15:32,390 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:15:32,440 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:15:32,440 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:15:35,622 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 63712)
+2025-05-03 10:15:48,753 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 63712): 
+2025-05-03 10:15:48,753 [ERROR] [SERVIDOR TCP] Error con ('127.0.0.1', 63712): EOF occurred in violation of protocol (_ssl.c:2406)
+2025-05-03 10:15:48,753 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 63712)
+2025-05-03 10:17:45,744 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:17:45,744 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:17:45,762 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:17:45,762 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:17:48,645 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 63719)
+2025-05-03 10:17:56,313 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 63719): Caterpie
+2025-05-03 10:18:01,108 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 63721)
+2025-05-03 10:18:08,832 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 63721): weedle
+2025-05-03 10:18:17,846 [INFO] [DEBUG] Datos obtenidos para Caterpie: base_experience = 39
+2025-05-03 10:18:18,027 [INFO] [DEBUG] Datos obtenidos para weedle: base_experience = 39
+2025-05-03 10:18:18,028 [INFO] [SERVIDOR TCP] Caterpie (39) vs weedle (39) - GanadorEmpate
+2025-05-03 10:18:18,028 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 63719)
+2025-05-03 10:18:18,029 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 63721)
+2025-05-03 10:19:01,494 [INFO] 127.0.0.1 - - [03/May/2025 10:19:01] "GET /batallas HTTP/1.1" 200 -
+2025-05-03 10:19:36,912 [INFO] 127.0.0.1 - - [03/May/2025 10:19:36] "[33mGET /batallas/1 HTTP/1.1[0m" 404 -
+2025-05-03 10:19:42,367 [INFO] 127.0.0.1 - - [03/May/2025 10:19:42] "GET /batallas/0 HTTP/1.1" 200 -
+2025-05-03 10:20:19,243 [INFO] 127.0.0.1 - - [03/May/2025 10:20:19] "[35m[1mPOST /batallas HTTP/1.1[0m" 201 -
+2025-05-03 10:21:09,544 [INFO] 127.0.0.1 - - [03/May/2025 10:21:09] "GET /batallas HTTP/1.1" 200 -
+2025-05-03 10:21:58,093 [INFO] 127.0.0.1 - - [03/May/2025 10:21:58] "[31m[1mPUT /batallas HTTP/1.1[0m" 405 -
+2025-05-03 10:22:52,690 [INFO] 127.0.0.1 - - [03/May/2025 10:22:52] "[33mPUT /batallas/3 HTTP/1.1[0m" 404 -
+2025-05-03 10:23:01,171 [INFO] 127.0.0.1 - - [03/May/2025 10:23:01] "PUT /batallas/1 HTTP/1.1" 200 -
+2025-05-03 10:23:04,723 [INFO] 127.0.0.1 - - [03/May/2025 10:23:04] "GET /batallas/1 HTTP/1.1" 200 -
+2025-05-03 10:23:09,762 [INFO] 127.0.0.1 - - [03/May/2025 10:23:09] "GET /batallas HTTP/1.1" 200 -
+2025-05-03 10:23:33,165 [INFO] 127.0.0.1 - - [03/May/2025 10:23:33] "[33mDELETE /batallas/3 HTTP/1.1[0m" 404 -
+2025-05-03 10:23:38,720 [INFO] 127.0.0.1 - - [03/May/2025 10:23:38] "DELETE /batallas/1 HTTP/1.1" 200 -
+2025-05-03 10:23:43,891 [INFO] 127.0.0.1 - - [03/May/2025 10:23:43] "GET /batallas HTTP/1.1" 200 -
+2025-05-03 10:25:44,561 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:25:44,561 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:25:44,581 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:25:44,581 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:25:51,128 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 63829)
+2025-05-03 10:25:56,862 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 63829): Kakuna
+2025-05-03 10:26:02,774 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 63832)
+2025-05-03 10:26:08,869 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 63832): Buterfree
+2025-05-03 10:26:16,075 [INFO] [DEBUG] Datos obtenidos para Kakuna: base_experience = 72
+2025-05-03 10:26:18,592 [WARNING] [DEBUG] Error en la API para Buterfree: Código de estado 404
+2025-05-03 10:26:18,594 [ERROR] [SERVIDOR TCP] Error con ('127.0.0.1', 63832): 'dict' object has no attribute 'append'
+2025-05-03 10:26:18,594 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 63832)
+2025-05-03 10:26:19,929 [INFO] [DEBUG] Datos obtenidos para Kakuna: base_experience = 72
+2025-05-03 10:26:20,054 [WARNING] [DEBUG] Error en la API para Buterfree: Código de estado 404
+2025-05-03 10:26:20,056 [ERROR] [SERVIDOR TCP] Error con ('127.0.0.1', 63829): 'dict' object has no attribute 'append'
+2025-05-03 10:26:20,057 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 63829)
+2025-05-03 10:33:26,390 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:33:26,433 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:33:26,495 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:33:26,495 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:33:27,113 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64426)
+2025-05-03 10:33:30,697 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64426): weedle
+2025-05-03 10:33:33,824 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64429)
+2025-05-03 10:33:47,289 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64429): venusaur
+2025-05-03 10:33:52,405 [INFO] [DEBUG] Datos obtenidos para weedle: base_experience = 39
+2025-05-03 10:33:52,983 [INFO] [DEBUG] Datos obtenidos para venusaur: base_experience = 263
+2025-05-03 10:33:52,984 [INFO] [SERVIDOR TCP] weedle (39) vs venusaur (263) - Ganadorvenusaur
+2025-05-03 10:33:52,984 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64429)
+2025-05-03 10:33:52,984 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64426)
+2025-05-03 10:34:18,135 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64438)
+2025-05-03 10:34:25,034 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64438): beedrill
+2025-05-03 10:34:28,931 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64440)
+2025-05-03 10:34:37,374 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64440): metapod
+2025-05-03 10:34:42,709 [INFO] [DEBUG] Datos obtenidos para beedrill: base_experience = 178
+2025-05-03 10:35:01,511 [INFO] [DEBUG] Datos obtenidos para metapod: base_experience = 72
+2025-05-03 10:35:01,513 [INFO] [SERVIDOR TCP] beedrill (178) vs metapod (72) - Ganadorbeedrill
+2025-05-03 10:35:01,514 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64440)
+2025-05-03 10:35:01,514 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64438)
+2025-05-03 10:35:12,114 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 64826): Hola
+2025-05-03 10:35:12,148 [ERROR] [SERVIDOR UDP][ERROR]: 'int' object is not subscriptable
+2025-05-03 10:37:07,796 [INFO] 127.0.0.1 - - [03/May/2025 10:37:07] "GET /batallas HTTP/1.1" 200 -
+2025-05-03 10:37:23,231 [INFO] 127.0.0.1 - - [03/May/2025 10:37:23] "[35m[1mPOST /batallas HTTP/1.1[0m" 201 -
+2025-05-03 10:37:26,716 [INFO] 127.0.0.1 - - [03/May/2025 10:37:26] "GET /batallas HTTP/1.1" 200 -
+2025-05-03 10:37:35,052 [INFO] 127.0.0.1 - - [03/May/2025 10:37:35] "[33mGET /batallas/4 HTTP/1.1[0m" 404 -
+2025-05-03 10:37:38,664 [INFO] 127.0.0.1 - - [03/May/2025 10:37:38] "GET /batallas/3 HTTP/1.1" 200 -
+2025-05-03 10:42:39,632 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:42:39,633 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:42:39,656 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:42:39,656 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:42:43,627 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64582)
+2025-05-03 10:42:50,695 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64582): caterpie
+2025-05-03 10:42:53,950 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64584)
+2025-05-03 10:42:59,112 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64584): rattata
+2025-05-03 10:43:04,544 [INFO] [DEBUG] Datos obtenidos para caterpie: base_experience = 39
+2025-05-03 10:43:04,763 [INFO] [DEBUG] Datos obtenidos para rattata: base_experience = 51
+2025-05-03 10:43:04,764 [INFO] [SERVIDOR TCP] caterpie (39) vs rattata (51) - Ganador: rattata
+2025-05-03 10:43:15,031 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64584)
+2025-05-03 10:43:15,031 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64582)
+2025-05-03 10:43:25,542 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 62319): Hola
+2025-05-03 10:43:25,552 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-03 10:43:29,276 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64589)
+2025-05-03 10:43:39,592 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64589): Bulbasaur
+2025-05-03 10:44:01,610 [INFO] Cerrando servidor de forma segura.
+2025-05-03 10:44:01,610 [INFO] [SERVIDOR UDP] Servidor UDP cerrado.
+2025-05-03 10:44:53,334 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64605)
+2025-05-03 10:44:53,335 [INFO] [SERVIDOR] Servidor cerrado.
+2025-05-03 10:44:58,218 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64605): Beedrill
+2025-05-03 10:45:03,572 [INFO] [DEBUG] Datos obtenidos para Bulbasaur: base_experience = 64
+2025-05-03 10:45:04,229 [INFO] [DEBUG] Datos obtenidos para Beedrill: base_experience = 178
+2025-05-03 10:45:04,230 [INFO] [SERVIDOR TCP] Bulbasaur (64) vs Beedrill (178) - Ganador: Beedrill
+2025-05-03 10:45:09,595 [INFO] Cerrando servidor de forma segura.
+2025-05-03 10:45:09,595 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64605)
+2025-05-03 10:45:09,595 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64589)
+2025-05-03 10:45:23,916 [INFO] 127.0.0.1 - - [03/May/2025 10:45:23] "GET /batallas HTTP/1.1" 200 -
+2025-05-03 10:48:20,922 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:48:20,925 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:48:20,954 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:48:20,954 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:48:28,801 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64762)
+2025-05-03 10:48:38,331 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64762): Kakuna
+2025-05-03 10:48:41,570 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64764)
+2025-05-03 10:48:45,982 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64764): Butterfree
+2025-05-03 10:48:51,056 [INFO] [DEBUG] Datos obtenidos para Kakuna: base_experience = 72
+2025-05-03 10:48:51,355 [INFO] [DEBUG] Datos obtenidos para Butterfree: base_experience = 198
+2025-05-03 10:48:51,356 [INFO] [SERVIDOR TCP] Kakuna (72) vs Butterfree (198) - Ganador: Butterfree
+2025-05-03 10:49:01,478 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64764)
+2025-05-03 10:49:01,478 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64762)
+2025-05-03 10:49:08,826 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 50956): Hola
+2025-05-03 10:49:08,835 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-03 10:49:11,954 [INFO] Cerrando servidor de forma segura.
+2025-05-03 10:49:11,954 [INFO] [SERVIDOR UDP] Servidor UDP cerrado.
+2025-05-03 10:49:18,037 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64769)
+2025-05-03 10:49:18,037 [INFO] [SERVIDOR] Servidor cerrado.
+2025-05-03 10:49:23,949 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64769): Raticate
+2025-05-03 10:52:58,978 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:52:58,979 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:52:59,003 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:52:59,004 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:53:04,593 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64819)
+2025-05-03 10:53:09,763 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64819): Pidgey
+2025-05-03 10:53:12,992 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64821)
+2025-05-03 10:53:16,543 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64821): Caterpie
+2025-05-03 10:53:22,153 [INFO] [DEBUG] Datos obtenidos para Pidgey: base_experience = 50
+2025-05-03 10:53:22,230 [INFO] [DEBUG] Datos obtenidos para Caterpie: base_experience = 39
+2025-05-03 10:53:22,230 [INFO] [SERVIDOR TCP] Pidgey (50) vs Caterpie (39) - Ganador: Pidgey
+2025-05-03 10:53:47,683 [ERROR] [SERVIDOR TCP] Error con ('127.0.0.1', 64821): 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2025-05-03 10:53:47,683 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64819)
+2025-05-03 10:53:47,683 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64821)
+2025-05-03 10:53:53,649 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 10:53:53,652 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 10:53:53,706 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 10:53:53,707 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 10:54:15,913 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64834)
+2025-05-03 10:54:20,047 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64834): Pidgeotto
+2025-05-03 10:54:24,144 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 64836)
+2025-05-03 10:54:27,538 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 64836): Metapod
+2025-05-03 10:54:32,848 [INFO] [DEBUG] Datos obtenidos para Pidgeotto: base_experience = 122
+2025-05-03 10:54:32,914 [INFO] [DEBUG] Datos obtenidos para Metapod: base_experience = 72
+2025-05-03 10:54:32,915 [INFO] [SERVIDOR TCP] Pidgeotto (122) vs Metapod (72) - Ganador: Pidgeotto
+2025-05-03 10:54:42,709 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64834)
+2025-05-03 10:54:42,709 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 64836)
+2025-05-03 10:54:49,301 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 64819): Hola
+2025-05-03 10:54:49,315 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-03 10:54:52,196 [INFO] Cerrando servidor de forma segura.
+2025-05-03 10:54:52,196 [INFO] [SERVIDOR UDP] Servidor UDP cerrado.
+2025-05-03 11:04:59,257 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 11:04:59,259 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 11:04:59,303 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 11:04:59,303 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 11:05:02,873 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 49834)
+2025-05-03 11:05:07,208 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 49834): Pidgeot
+2025-05-03 11:05:13,323 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 49836)
+2025-05-03 11:05:17,936 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 49836): Butterfree
+2025-05-03 11:05:22,136 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 49839)
+2025-05-03 11:05:22,189 [INFO] [SERVIDOR TCP] Cliente ('127.0.0.1', 49839) en espera por semáforo
+2025-05-03 11:05:23,127 [INFO] [DEBUG] Datos obtenidos para Pidgeot: base_experience = 216
+2025-05-03 11:05:23,216 [INFO] [DEBUG] Datos obtenidos para Butterfree: base_experience = 198
+2025-05-03 11:05:23,217 [INFO] [SERVIDOR TCP] Pidgeot (216) vs Butterfree (198) - GanadorPidgeot
+2025-05-03 11:05:23,218 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 49836)
+2025-05-03 11:05:23,218 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 49834)
+2025-05-03 11:05:25,550 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 49839): Beedrill
+2025-05-03 11:05:38,306 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 49843)
+2025-05-03 11:05:42,113 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 49843): Caterpie
+2025-05-03 11:05:47,184 [INFO] [DEBUG] Datos obtenidos para Beedrill: base_experience = 178
+2025-05-03 11:05:47,625 [INFO] [DEBUG] Datos obtenidos para Caterpie: base_experience = 39
+2025-05-03 11:05:47,625 [INFO] [SERVIDOR TCP] Beedrill (178) vs Caterpie (39) - GanadorBeedrill
+2025-05-03 11:05:47,625 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 49843)
+2025-05-03 11:05:47,626 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 49839)
+2025-05-03 11:05:51,886 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 51362): Hola
+2025-05-03 11:05:51,895 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-03 11:18:09,771 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 11:18:09,774 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 11:18:09,814 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 11:18:09,815 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 11:18:12,891 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 60738): Hola
+2025-05-03 11:18:12,900 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-03 11:18:55,550 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50099)
+2025-05-03 11:19:01,338 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50099): irene
+2025-05-03 11:19:05,973 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50101)
+2025-05-03 11:19:08,287 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50101): julia
+2025-05-03 11:19:14,924 [WARNING] [DEBUG] Error en la API para irene: Código de estado 404
+2025-05-03 11:19:16,370 [WARNING] [DEBUG] Error en la API para julia: Código de estado 404
+2025-05-03 11:19:16,371 [INFO] [SERVIDOR TCP] irene (0) vs julia (0) - GanadorEmpate
+2025-05-03 11:19:16,371 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50101)
+2025-05-03 11:19:16,371 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50099)
+2025-05-03 11:19:30,951 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 60890): Hola
+2025-05-03 11:19:30,960 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-03 11:20:42,229 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50111)
+2025-05-03 11:20:45,035 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50111): Beedrill
+2025-05-03 11:20:51,774 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50121)
+2025-05-03 11:20:54,273 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50121): 
+2025-05-03 11:20:54,273 [ERROR] [SERVIDOR TCP] Error con ('127.0.0.1', 50121): EOF occurred in violation of protocol (_ssl.c:2406)
+2025-05-03 11:20:54,273 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50121)
+2025-05-03 11:20:57,808 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50123)
+2025-05-03 11:20:59,274 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50111)
+2025-05-03 11:21:01,130 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50123): Metapod
+2025-05-03 11:21:09,256 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50128)
+2025-05-03 11:21:12,143 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50128): Weedle
+2025-05-03 11:21:17,572 [INFO] [DEBUG] Datos obtenidos para Metapod: base_experience = 72
+2025-05-03 11:21:17,658 [INFO] [DEBUG] Datos obtenidos para Weedle: base_experience = 39
+2025-05-03 11:21:17,659 [INFO] [SERVIDOR TCP] Metapod (72) vs Weedle (39) - GanadorMetapod
+2025-05-03 11:21:17,660 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50123)
+2025-05-03 11:21:17,660 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50128)
+2025-05-03 11:21:56,682 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-03 11:21:56,683 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-03 11:21:56,704 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-03 11:21:56,704 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 11:22:00,334 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50143)
+2025-05-03 11:22:03,949 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50143): Pidgeotto
+2025-05-03 11:22:07,397 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 50146)
+2025-05-03 11:22:10,669 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 50146): Caterpie
+2025-05-03 11:22:15,753 [INFO] [DEBUG] Datos obtenidos para Pidgeotto: base_experience = 122
+2025-05-03 11:22:15,812 [INFO] [DEBUG] Datos obtenidos para Caterpie: base_experience = 39
+2025-05-03 11:22:15,813 [INFO] [SERVIDOR TCP] Pidgeotto (122) vs Caterpie (39) - GanadorPidgeotto
+2025-05-03 11:22:15,813 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50146)
+2025-05-03 11:22:15,814 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 50143)
+2025-05-04 12:07:56,980 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-04 12:07:57,004 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-04 12:07:57,033 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-04 12:07:57,033 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-04 12:08:05,827 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 56933)
+2025-05-04 12:08:18,507 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 56935)
+2025-05-04 12:11:33,085 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 56933): Ivysaur
+2025-05-04 12:11:41,924 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 56935): Blastoise
+2025-05-04 12:11:47,005 [INFO] [DEBUG] Datos obtenidos para Ivysaur: base_experience = 142
+2025-05-04 12:11:47,430 [INFO] [DEBUG] Datos obtenidos para Blastoise: base_experience = 265
+2025-05-04 12:11:47,431 [INFO] [SERVIDOR TCP] Ivysaur (142) vs Blastoise (265) - Ganador: Blastoise
+2025-05-04 12:11:47,433 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 56933)
+2025-05-04 12:11:47,433 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 56935)
+2025-05-04 12:14:49,633 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 56979): Hola
+2025-05-04 12:14:49,663 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-04 12:16:51,818 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-04 12:16:51,820 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-04 12:16:51,848 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-04 12:16:51,848 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-04 12:17:45,638 [INFO] [SERVIDOR UDP] Esperando mensajes en el puerto 5000...
+2025-05-04 12:17:45,640 [INFO] [SERVIDOR TCP] Esperando conexiones...
+2025-05-04 12:17:45,664 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2025-05-04 12:17:45,664 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-04 12:17:48,161 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 56965)
+2025-05-04 12:17:54,201 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 56965): Pidgeotto
+2025-05-04 12:17:58,259 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 56967)
+2025-05-04 12:18:03,674 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 56967): Wartortle
+2025-05-04 12:18:06,177 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 56969)
+2025-05-04 12:18:06,256 [INFO] [SERVIDOR TCP] Cliente ('127.0.0.1', 56969) en espera por semáforo
+2025-05-04 12:18:18,783 [INFO] [DEBUG] Datos obtenidos para Pidgeotto: base_experience = 122
+2025-05-04 12:18:18,865 [INFO] [DEBUG] Datos obtenidos para Wartortle: base_experience = 142
+2025-05-04 12:18:18,866 [INFO] [SERVIDOR TCP] Pidgeotto (122) vs Wartortle (142) - Ganador: Wartortle
+2025-05-04 12:18:18,867 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 56965)
+2025-05-04 12:18:18,867 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 56967)
+2025-05-04 12:18:18,867 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 56969): Charmeleon
+2025-05-04 12:18:27,698 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 56973)
+2025-05-04 12:18:31,145 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 56973): Weedle
+2025-05-04 12:18:46,228 [INFO] [DEBUG] Datos obtenidos para Charmeleon: base_experience = 142
+2025-05-04 12:18:46,299 [INFO] [DEBUG] Datos obtenidos para Weedle: base_experience = 39
+2025-05-04 12:18:46,300 [INFO] [SERVIDOR TCP] Charmeleon (142) vs Weedle (39) - Ganador: Charmeleon
+2025-05-04 12:18:46,301 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 56973)
+2025-05-04 12:18:46,302 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 56969)
+2025-05-04 12:24:08,643 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 57015)
+2025-05-04 12:24:14,237 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 57015): luis
+2025-05-04 12:24:17,485 [INFO] [SERVIDOR TCP] Conexión establecida con ('127.0.0.1', 57017)
+2025-05-04 12:24:20,360 [INFO] [SERVIDOR TCP] Mensaje recibido de ('127.0.0.1', 57017): antonio
+2025-05-04 12:24:37,247 [WARNING] [DEBUG] Error en la API para luis: Código de estado 404, nombre no encontrado
+2025-05-04 12:24:39,014 [WARNING] [DEBUG] Error en la API para antonio: Código de estado 404, nombre no encontrado
+2025-05-04 12:24:39,016 [INFO] [SERVIDOR TCP] luis (0) vs antonio (0) - Ganador: Empate
+2025-05-04 12:24:39,017 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 57015)
+2025-05-04 12:24:39,017 [INFO] [SERVIDOR TCP] Cerrando conexión con ('127.0.0.1', 57017)
+2025-05-04 12:27:18,732 [INFO] [SERVIDOR UDP] Mensaje recibido de ('127.0.0.1', 50778): Hola
+2025-05-04 12:27:18,741 [INFO] [SERVIDOR UDP] Historial enviado.
+2025-05-04 12:28:10,158 [INFO] 127.0.0.1 - - [04/May/2025 12:28:10] "GET /batallas HTTP/1.1" 200 -
+2025-05-04 12:29:12,499 [INFO] 127.0.0.1 - - [04/May/2025 12:29:12] "GET /batallas/2 HTTP/1.1" 200 -
+2025-05-04 12:30:20,651 [INFO] 127.0.0.1 - - [04/May/2025 12:30:20] "[35m[1mPOST /batallas HTTP/1.1[0m" 201 -
+2025-05-04 12:30:50,733 [INFO] 127.0.0.1 - - [04/May/2025 12:30:50] "GET /batallas/78 HTTP/1.1" 200 -
+2025-05-04 12:34:22,440 [INFO] 127.0.0.1 - - [04/May/2025 12:34:22] "[35m[1mPOST /batallas HTTP/1.1[0m" 201 -
+2025-05-04 12:34:31,412 [INFO] 127.0.0.1 - - [04/May/2025 12:34:31] "[31m[1mPUT /batallas HTTP/1.1[0m" 405 -
+2025-05-04 12:34:44,537 [INFO] 127.0.0.1 - - [04/May/2025 12:34:44] "PUT /batallas/78 HTTP/1.1" 200 -
+2025-05-04 12:35:29,647 [INFO] 127.0.0.1 - - [04/May/2025 12:35:29] "GET /batallas/78 HTTP/1.1" 200 -
+2025-05-04 12:35:48,406 [INFO] 127.0.0.1 - - [04/May/2025 12:35:48] "GET /batallas/16 HTTP/1.1" 200 -
+2025-05-04 12:36:35,467 [INFO] 127.0.0.1 - - [04/May/2025 12:36:35] "DELETE /batallas/16 HTTP/1.1" 200 -
